@@ -1,8 +1,12 @@
 server:
   port: 8082
+
 spring:
   application:
     name: cart-service
+  cloud:
+    nacos:
+      server-addr: ${hm.db.host}:8848
   profiles:
     active: dev
   datasource:
@@ -10,6 +14,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: ${hm.db.pw}
+
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
@@ -17,6 +22,7 @@ mybatis-plus:
     db-config:
       update-strategy: not_null
       id-type: auto
+
 logging:
   level:
     com.hmall: debug
@@ -24,6 +30,7 @@ logging:
     dateformat: HH:mm:ss:SSS
   file:
     path: "logs/${spring.application.name}"
+
 knife4j :
   enable: true
   openapi:
