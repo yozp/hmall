@@ -15,6 +15,10 @@ spring:
     username: root
     password: ${hm.db.pw}
 
+feign:
+  okhttp:
+    enabled: true # 开启OKHttp功能
+
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
