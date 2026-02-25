@@ -1,3 +1,4 @@
 # Project exclude paths
 /hm-common/target/
 /hm-service/target/
+.idea
